@@ -8,3 +8,5 @@ try:
 
 except: 
     print("Error en el programa .....")
+finally:
+    print("yo siempre aparezco")
