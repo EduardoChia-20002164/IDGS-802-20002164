@@ -1,0 +1,48 @@
+{% extends "layout.html"%}
+
+{%block content%}
+        {%from "_macros.html" import render_firld%}
+        <div class="container-fluid" >
+                <div class="row mt-4 justify-content-center">
+                        <div class="col-9">
+                                <div class="card">
+                                        <div class="card-header">
+                                            <h2 class="text-primary text-center">Modificar Maestro</h2>
+                                        </div>
+                                        <div class="card-body">
+                                                <form name="sent" action="/modificarM" id="form1" method="POST">
+                                                        <div class="row control-group">
+                                                                <div class="form-group col-xs-12 float-label-form-group controls">
+                                                                        {{render_firld(form.id,class='form-control')}}
+                                                                </div>
+                                                        </div>
+                                                        <div class="row control-group">
+                                                                <div class="form-group col-xs-12 float-label-form-group controls">
+                                                                        {{render_firld(form.nombre,class='form-control')}}
+                                                                </div>
+                                                        </div>
+                                                        <div class="row control-group">
+                                                                <div class="form-group col-xs-12 float-label-form-group controls">
+                                                                        {{render_firld(form.apellidos,class='form-control')}} 
+                                                                </div>
+                                                        </div>
+                        
+                                                        <div class="row control-group">
+                                                                <div class="form-group col-xs-12 float-label-form-group controls">
+                                                                        {{render_firld(form.email,class='form-control')}} 
+                                                                </div>
+                                                        </div>
+                                                        <br>
+                                                        <center>
+                                                                <input type="hidden" name="csrf_token" value="{{csrf_token()}}">
+                                                                <input type="submit" class="btn1" id="modificar" name="modificar" value="modificar"/>
+                                                                <a href="ABCompletoM" class="btn4"><i class="icon-action-undo icon-white"></i>Cancelar</a>
+                                                        </center>
+                                                        
+                                                </form>
+                                        </div>
+                                </div>
+                         </div>       
+                </div>
+        </div>
+{%endblock%} 

@@ -1,0 +1,53 @@
+{% extends "layout.html"%}
+
+{%block content%}
+        {%from "_macros.html" import render_firld%}
+        <style>
+		.input-group {
+			display: inline-block;
+			margin-right: 10px;
+			vertical-align: top;
+			text-align: center;
+			width: 30%;
+		}
+		.input-group img {
+			display: block;
+			margin: 0 auto 10px;
+			width: 50px;
+			height: 50px;
+		}
+		.input-group input {
+			display: block;
+			margin: 0 auto;
+			width: 100%;
+		}
+	</style>
+
+
+<div class="container-fluid" >
+        <div class="row mt-4 justify-content-center">
+                <div class="col-9">
+                        <div class="card">
+                                <div class="card-header">
+                                    <h2 class="text-primary text-center">Registro del persnal UTL</h2>
+                                </div>
+                                <div class="card-body">
+                                        <center>
+                                                <form name="sent" action="/" id="form1" method="POST">
+                                                        <input type="hidden" name="csrf_token" value="{{csrf_token()}}">
+                                                                <div class="input-group">
+                                                                        <img src="../static/bootstrap-5.0.2-dist/img/alumno.png" alt="Imagen 1">
+                                                                        <input type="submit" class="btn1" id="reg-alum" name="registra" value="Alumnos"/>
+                                                                </div>
+                                                                <div class="input-group">
+                                                                        <img src="../static/bootstrap-5.0.2-dist/img/maestro.png" alt="Imagen 1">
+                                                                        <input type="submit" class="btn2" id="reg-maestro" name="registra" value="Maestros"/>
+                                                                </div>
+                                                </form>
+                                        </center>
+                                </div>
+                        </div>
+                 </div>       
+        </div>
+</div>
+{%endblock%}

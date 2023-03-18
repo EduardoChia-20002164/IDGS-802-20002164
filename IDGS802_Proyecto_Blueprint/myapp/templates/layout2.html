@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Document</title>
+
+    <style>
+
+        body{
+            padding-top: 60px;
+        }
+        .tr-head{background: greenyellow;}
+        .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+        }
+        table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+        }
+
+        td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+        }
+
+        tr:nth-child(even) {
+        background-color: #ffffff;
+}
+    </style>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <body >
+    
+        <nav class="navbar navbar-dark bg-dark">
+          
+            <div class="container-fluid">
+            
+              <a class="navbar-brand" href="#">
+               
+                Calculadora de resistencias
+              </a>
+            </div>
+          </nav>
+    <div class="container">
+        <!--QUE IMPRIMA EL MENSAJE SI TODO FUE CORRECTO Y VA RECORRIENDO LA LISTA CON ELL FOR-->
+        {%with messages=get_flashed_messages()%}
+        {%if messages%}
+           {%for message in messages%}
+           <div class="alert alert-success">
+                {{message}}
+           </div>
+           {%endfor%}
+        {%endif%}
+        {%endwith%}
+
+        {%block content%}
+        
+        {%endblock%}
+    </div>
+
+
+<!--
+  <h1>Hola Mundo</h1>
+    <h2>{{titulo}}</h2>
+
+    {%for item in lista%}
+        <h3>{{item}}</h3>
+    {%endfor%}
+-->  
+</body>
+</html>
